@@ -1,0 +1,99 @@
+<!-- Button trigger modal -->
+<div class="customized-modal-welcome" style="position: absolute; bottom: 20px; right: 20px">
+    <button type="button" class="style-scope codelabs-index" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Welcome
+      </button>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="modal-title" id="exampleModalLongTitle">Welcome to H2O.ai Community (HaC)</h1>
+        </div>
+        <div class="modal-body">
+            <h3><strong>Welcome New Members!</strong></h3>
+
+            <p>
+                We are here as a community to share, learn, network, ask questions, provide answers, 
+                take the next step, and explore <a href="https://www.h2o.ai/community/glossary/artificial-intelligence">Artificial Intelligence</a>, 
+                <a href="https://www.h2o.ai/community/glossary/machine-learning">Machine Learning</a>, 
+                and <a href="https://www.h2o.ai/community/glossary/data-science">Data Science</a>.  
+                We are here to democratize AI. It will take a village to democratize AI.
+                Below are a few pointers to help you explore this community, where to start, and how you can contribute.
+            </p>
+
+            <h4><strong>Things You Can Do</strong></h4>
+
+            <ul>
+                <li>
+                    <a href="https://www.h2o.ai/community/participate/postmessage?ReturnUrl=https%3a%2f%2fwww.h2o.ai%2fcommunity%2fglossary%2fdata-science">
+                        Post
+                    </a> Questions/Answers
+                </li>
+                <ul>
+                    <li>Up Vote</li>
+                </ul>
+                <li>Find <a href="https://training.h2o.ai/">Tutorials</a></li>
+                <li>Takes <a href="https://training.h2o.ai/">Classes</a></li>
+                <ul>
+                    <li>FYI Free 
+                        <a href="https://training.h2o.ai/products/ai-foundations-course">
+                            <strong>AI Foundations Course</strong>
+                        </a> 
+                        starting the end of June
+                    </li>
+                </ul>
+                <li><a href="https://www.h2o.ai/community/participate/share-file">Share files</a></li>
+            </ul>
+
+            <h4><strong>Community Levels: Contribution and Recognition</strong></h4>
+
+            <p>
+                Advance your reputation level in the community by earning engagement, contribution and reputation points.  
+                Learn more about the various <a href="https://www.h2o.ai/community/browse/community-levels"><strong>community levels</strong></a> and how you earn points and get recognized. 
+            </p>
+
+            <ul>
+                <li><strong>5 levels</strong></li>
+                <ul>
+                    <li><strong>New Member, Novice, Contributor, Master, Maker</strong></li>
+                </ul>
+            </ul>
+
+            <h4><strong>Fill out your profile</strong></h4>
+
+            <p>Tell us more about yourself and fill out your <a href="https://www.h2o.ai/community/network/members/profile"><strong>profile</strong></a> and update <a href="https://www.h2o.ai/community/network/members/profile/myaccount/my-settings?section=privacy"><strong>privacy setting</strong></a></p>
+
+            <h4><strong>New Member Posting Question</strong></h4>
+
+            <p>Want to ask a question, please review and leverage the <a href="https://www.h2o.ai/community/browse/best-practices"><strong>best practices for posting questions</strong></a></p>
+
+            <p>
+                Regards,<br/>
+                <a href="https://www.h2o.ai/community/people/rafael-coss1">Rafael</a> and team,<br/>
+                H2O.ai Community Maker<br/>
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="style-scope codelabs-index" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>// <![CDATA[
+  $('div.customized-modal-welcome').appendTo('.home-hero-public');
+
+  // Launch Welcome Modal on First Time Page Loads
+  $(window).on('load',function(){
+      if($.cookie('pop') == null){
+        $('#exampleModalCenter').modal('show');
+        $.cookie('pop', '1');
+      }
+  });
+  // ]]></script>
