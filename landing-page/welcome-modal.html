@@ -1,12 +1,12 @@
 <!-- Button trigger modal -->
 <div class="customized-modal-welcome" style="position: absolute; bottom: 20px; right: 20px">
-    <button type="button" class="style-scope codelabs-index" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    <button type="button" class="style-scope codelabs-index" class="btn btn-primary" data-toggle="modal" data-target="#welcomeToHaC">
         Welcome
       </button>
 </div>
   
   <!-- Modal -->
-  <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" id="welcomeToHaC" tabindex="-1" role="dialog" aria-labelledby="welcomeToHaCTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -92,8 +92,18 @@
   // Launch Welcome Modal on First Time Page Loads
   $(window).on('load',function(){
       if($.cookie('pop') == null){
-        $('#exampleModalCenter').modal('show');
+        $('#welcomeToHaC').modal('show');
         $.cookie('pop', '1');
       }
   });
+
+  // Invoke the Welcome Modal on Page Load in a Link Shared with Users
+  $(document).ready(function() {
+      // JS will look for #welcomeToHaC on the url if it is found, it will load the modal
+      // URL to share with users: https://www.h2o.ai/community/home#welcomeToHaC
+      if(window.location.href.indexOf('#welcomeToHaC') != -1) {
+        $('#welcomeToHaC').modal('show');
+      }
+  });
+
   // ]]></script>
